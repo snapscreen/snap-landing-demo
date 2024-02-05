@@ -39,8 +39,8 @@ export default function Home() {
 
   return (
     <div className='max-w-screen-md mx-auto bg-surface' id="root">
-      <header className="mx-auto gap-6 flex justify-center items-center px-8 py-6">
-        <p className='text-sm font-medium opacity-80'>Powered by SnapOdds</p>
+      <header className="mx-auto gap-2 flex justify-center items-center px-8 py-6">
+        <p className='text-sm font-medium opacity-80'>Powered by Snapscreen</p>
       </header>
       <main className="flex flex-col items-center justify-between px-6 mx-auto">
         <h1 className='text-xl font-bold'>
@@ -228,7 +228,9 @@ export default function Home() {
       </main>
       
       <footer className="flex flex-col items-center justify-between px-6 py-6 my-8 mx-auto">
-        <p className='text-center'>Snap the TV and get betting odds, merchandise, tickets and similar offers for the game.</p>
+        <p className='text-center'>
+          Snap any sports game on your live TV screen to access betting odds, merchandise, tickets, and more.
+        </p>
         <div className='font-semibold text-sm mx-auto mt-8'>
           <ThemeSwitch />
         </div>
