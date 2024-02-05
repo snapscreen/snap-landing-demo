@@ -86,7 +86,7 @@ export default function Home() {
               Gear Up for Glory!
             </h2>
             <p className='mb-4 w-full'>
-              Grab your team's merch now</p>
+              Grab your team’s merch now</p>
             <div className="relative z-10 w-full mt-auto">
               <button 
                 onClick={() => handleButtonClick("https://www.fanatics.com/nba/")}
