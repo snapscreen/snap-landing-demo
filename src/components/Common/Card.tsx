@@ -20,7 +20,7 @@ export default function Card({
       }
       <div
         className={
-          `flex flex-col justify-center items-center h-full w-full p-8 relative border-2 border-dotted hover:border-solid rounded-xl overflow-hidden bg-surface shadow-xl dark:shadow-thick 
+          `flex flex-col justify-center items-center h-full w-full p-8 relative border border-slate-300 dark:border-slate-600 rounded-xl overflow-hidden bg-surface shadow-xl dark:shadow-thick 
           ${isVideo ? 'aspect-video' : ''}
           ${classNames && classNames}
           `}

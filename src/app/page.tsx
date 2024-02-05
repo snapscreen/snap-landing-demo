@@ -179,7 +179,7 @@ export default function Home() {
           </Card>
         </section>
         
-        <section className='w-full mt-8 pt-8 border-t-4 border-primary border-dotted'>
+        <section className='w-full mt-8 pt-8 border-t-4 border-slate-300 dark:border-slate-600'>
           <h2 className='font-bold text-xl mb-2 flex items-center gap-3'>
             <span className="material-symbols-rounded" aria-hidden="true">smart_display</span>
             Clip Result
@@ -218,7 +218,7 @@ export default function Home() {
           </Card>
         </section>
 
-        <section className='w-full my-8 pt-8 border-t-4 border-primary border-dotted'>
+        <section className='w-full my-8 pt-8 border-t-4 border-slate-300 dark:border-slate-600'>
           <h2 className='font-bold text-xl mb-2 flex items-center gap-3'>
             <span className="material-symbols-rounded" aria-hidden="true">search</span>
             Web Search Results
