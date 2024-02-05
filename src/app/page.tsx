@@ -83,6 +83,24 @@ export default function Home() {
 
           <Card overline='Merchandise'>
             <h2 className='text-4xl font-bold leading-0 tracking-tighter mr-auto mb-4'>
+              Explore Team Insights!
+            </h2>
+            <p className='mb-4 w-full'>
+              Grab your team’s merch now</p>
+            <div className="relative z-10 w-full mt-auto">
+              <button 
+                onClick={() => handleButtonClick("stats.png")}
+                type="button" 
+                className="flex items-center justify-center gap-3 text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary text-on-primary duration-200 focus:ring-offset-2 focus:ring-inline-flex"
+              >
+                <span className="material-symbols-rounded" aria-hidden="true">scoreboard</span>
+                View teams stats
+              </button>
+            </div>
+          </Card>
+
+          <Card overline='Merchandise'>
+            <h2 className='text-4xl font-bold leading-0 tracking-tighter mr-auto mb-4'>
               Gear Up for Glory!
             </h2>
             <p className='mb-4 w-full'>
@@ -130,7 +148,7 @@ export default function Home() {
               Ask a question and get answers from our AI and the fan community.</p>
             <div className="relative z-10 w-full mt-auto">
               <button 
-                onClick={() => (setOpen(true), setIframeSrc(''))}
+                onClick={() => handleButtonClick("ai.png")}
                 type="button" 
                 className="flex items-center justify-center gap-3 text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-on-surface text-surface duration-200 focus:ring-offset-2 focus:ring-inline-flex"
               >
@@ -141,9 +159,12 @@ export default function Home() {
           </Card>
         </section>
         
-        <section className='w-full my-8'>
+        <section className='w-full mt-8 pt-8 border-t-4 border-primary border-dotted'>
+          <h2 className='font-bold text-xl mb-2 flex items-center gap-3'>
+            <span className="material-symbols-rounded" aria-hidden="true">smart_display</span>
+            Clip it up
+          </h2>
           <div className='mb-2 flex items-center gap-3'>
-            <span>Game clip</span>
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
@@ -176,13 +197,23 @@ export default function Home() {
             />
           </Card>
         </section>
+
+        <section className='w-full my-8 pt-8 border-t-4 border-primary border-dotted'>
+          <h2 className='font-bold text-xl mb-2 flex items-center gap-3'>
+            <span className="material-symbols-rounded" aria-hidden="true">search</span>
+            Web Search Results
+          </h2>
+          Loading...
+        </section>
       </main>
+      
       <footer className="flex flex-col items-center justify-between px-6 py-6 my-8 mx-auto">
         <p className='text-center'>Snap the TV and get betting odds, merchandise, tickets and similar offers for the game.</p>
         <div className='font-semibold text-sm mx-auto mt-8'>
           <ThemeSwitch />
         </div>
       </footer>
+
       <Sheet 
         rootId="root" 
         isOpen={isOpen} 
