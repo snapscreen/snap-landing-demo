@@ -91,8 +91,9 @@ export default function Home() {
               <button 
                 onClick={() => handleButtonClick("https://www.fanatics.com/nba/")}
                 type="button" 
-                className="flex items-center justify-center text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary text-on-primary duration-200 focus:ring-offset-2 focus:ring-inline-flex"
+                className="flex items-center justify-center gap-3 text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary text-on-primary duration-200 focus:ring-offset-2 focus:ring-inline-flex"
               >
+                <span className="material-symbols-rounded" aria-hidden="true">storefront</span>
                 Get merch
               </button>
             </div>
@@ -113,8 +114,9 @@ export default function Home() {
               <button 
                 onClick={() => handleButtonClick("https://www.hellotickets.com/us/miami/sports/miami-heat-tickets/2024-03-05,1930/1891286/2")}
                 type="button" 
-                className="flex items-center justify-center text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary text-on-primary duration-200 focus:ring-offset-2 focus:ring-inline-flex"
+                className="flex items-center justify-center gap-3 text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary text-on-primary duration-200 focus:ring-offset-2 focus:ring-inline-flex"
               >
+                <span className="material-symbols-rounded" aria-hidden="true">local_activity</span>
                 Save 10% on your tickets
               </button>
             </div>
@@ -130,8 +132,9 @@ export default function Home() {
               <button 
                 onClick={() => (setOpen(true), setIframeSrc(''))}
                 type="button" 
-                className="flex items-center justify-center text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-on-surface text-surface duration-200 focus:ring-offset-2 focus:ring-inline-flex"
+                className="flex items-center justify-center gap-3 text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-on-surface text-surface duration-200 focus:ring-offset-2 focus:ring-inline-flex"
               >
+                <span className="material-symbols-rounded" aria-hidden="true">forum</span>
                 Ask AI and fellow fans!
               </button>
             </div>
