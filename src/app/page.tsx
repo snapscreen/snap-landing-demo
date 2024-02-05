@@ -37,7 +37,7 @@ export default function Home() {
                 />
                 <div className='text-sm font-medium'>@ Miami Heat</div>
                 <div className='flex items-baseline gap-2 -mr-3'>
-                  <span className='text-xl font-bold'>1.90</span>
+                  <span className='text-2xl font-bold'>1.90</span>
                   <span className='text-sm'>-1.5</span>
                 </div>
               </div>
@@ -51,7 +51,7 @@ export default function Home() {
                 />
                 <div className='text-sm font-medium'>Detroit Pistons</div>
                 <div className='flex items-baseline gap-2 -mr-3'>
-                  <span className='text-xl font-bold'>1.90</span>
+                  <span className='text-2xl font-bold'>1.90</span>
                   <span className='text-sm'>+1.5</span>
                 </div>
               </div>
@@ -87,8 +87,8 @@ export default function Home() {
             </div>
           </Card>
           <Card overline='Missing information?'>
-            <h2 className='text-4xl font-bold leading-0 tracking-tighter mr-auto mb-4'>
-              Feeling curious?
+            <h2 className='text-2xl font-bold leading-0 tracking-tighter mr-auto mb-4'>
+              Feeling curious or missing information?
             </h2>
             <p className='mb-4'>
               Ask a question and get answers from our AI and the fan community.</p>
