@@ -66,13 +66,13 @@ export default function Home() {
             <div className="relative z-10 w-full mt-auto">
               <div className='text-center mb-3 text-sm'>
                 <button 
-                  onClick={() => (setOpen(true), setIframeSrc(''))}
+                  onClick={() => handleButtonClick("odds.png")}
                   type="button"
                   className='font-bold text-primary underline underline-offset-4 decoration-1'>
                   Show more</button>
               </div>
               <button 
-                onClick={() => (setOpen(true), setIframeSrc(''))}
+                onClick={() => handleButtonClick("odds.png")}
                 type="button" 
                 className="flex items-center justify-center text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary text-on-primary duration-200 focus:ring-offset-2 focus:ring-inline-flex"
               >
@@ -89,7 +89,7 @@ export default function Home() {
               Grab your team’s merch now</p>
             <div className="relative z-10 w-full mt-auto">
               <button 
-                onClick={() => handleButtonClick("https://www.fanatics.com/nba/")}
+                onClick={() => handleButtonClick("fanatics.png")}
                 type="button" 
                 className="flex items-center justify-center gap-3 text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary text-on-primary duration-200 focus:ring-offset-2 focus:ring-inline-flex"
               >
@@ -105,14 +105,14 @@ export default function Home() {
             <p className='mb-4 w-full'>
               Get your tickets for upcoming games at 
               <button 
-                onClick={() => handleButtonClick("https://www.hellotickets.com/us/miami/sports/miami-heat-tickets/2024-03-05,1930/1891286/2")}
+                onClick={() => handleButtonClick("tickets.png")}
                 type="button"  
                 className='font-bold text-primary underline underline-offset-4 decoration-1'>
                 www.hellotickets.com</button>
             </p>
             <div className="relative z-10 w-full mt-auto">
               <button 
-                onClick={() => handleButtonClick("https://www.hellotickets.com/us/miami/sports/miami-heat-tickets/2024-03-05,1930/1891286/2")}
+                onClick={() => handleButtonClick("tickets.png")}
                 type="button" 
                 className="flex items-center justify-center gap-3 text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary text-on-primary duration-200 focus:ring-offset-2 focus:ring-inline-flex"
               >
@@ -194,11 +194,19 @@ export default function Home() {
           <Sheet.Header />
           <Sheet.Content>
             <Sheet.Scroller>
+              <Image
+                src={'/'+iframeSrc}
+                alt=""
+                width={400}
+                height={1000}
+              />
+              {/*
               <iframe 
                 src={iframeSrc}
                 className='w-full h-screen bg-surface'
                 allowTransparency
               ><p>Your browser does not support iframes.</p></iframe>
+              */}
             </Sheet.Scroller>
           </Sheet.Content>
         </Sheet.Container>
