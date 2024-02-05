@@ -71,7 +71,7 @@ export default function Home() {
               Merchandise
             </p>
           </Card>
-          <Card overline='Tickets' classNames=''>
+          <Card overline='Tickets'>
             <h2 className='text-4xl font-bold leading-0 tracking-tighter mr-auto mb-4'>
               Looking for tickets?</h2>
             <p className='mb-4'>
@@ -86,7 +86,24 @@ export default function Home() {
               </button>
             </div>
           </Card>
+          <Card overline='Missing information?'>
+            <h2 className='text-4xl font-bold leading-0 tracking-tighter mr-auto mb-4'>
+              Feeling curious?
+            </h2>
+            <p className='mb-4'>
+              Ask a question and get answers from our AI and the fan community.</p>
+            <div className="relative z-10 w-full mt-auto">
+              <button 
+                onClick={() => setOpen(true)}
+                type="button" 
+                className="flex items-center justify-center text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-on-surface text-surface duration-200 focus:ring-offset-2 focus:ring-inline-flex"
+              >
+                Ask AI and fellow fans!
+              </button>
+            </div>
+          </Card>
         </section>
+        
         <section className='w-full my-8'>
           <div className='mb-2 flex items-center gap-3'>
             <span>Game clip</span>
