@@ -1,21 +1,19 @@
-# Website of Peter Geppel
-
-Created by Matthias Grieder, Zeitvertrieb © Vienna 2024
+# Snap Landing Demo Webpage
 
 ## Deployment
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ab179e89-5589-49af-8940-e7f556edd9f4/deploy-status)](https://app.netlify.com/sites/petergeppel/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3a9f8427-5120-4738-af44-916f5bf0cb92/deploy-status)](https://app.netlify.com/sites/snap-landing-demo/deploys)
 
 ## Dev Getting Started
 
 ```bash
- npm install
+ yarn install
 ```
 
 Start dev server
 
 ```bash
-npm run dev
+yarn run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
