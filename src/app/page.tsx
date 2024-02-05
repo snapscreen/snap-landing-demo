@@ -251,13 +251,6 @@ export default function Home() {
                 width={400}
                 height={1000}
               />
-              {/*
-              <iframe 
-                src={iframeSrc}
-                className='w-full h-screen bg-surface'
-                allowTransparency
-              ><p>Your browser does not support iframes.</p></iframe>
-              */}
             </Sheet.Scroller>
           </Sheet.Content>
         </Sheet.Container>
