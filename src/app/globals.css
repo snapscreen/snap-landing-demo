@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --primary: #ff385c;
+    --surface: #ffffff;
+    --on-surface: #222222;
+    --on-primary: #ffffff;
+  }
+
+  [data-theme="dark"] {
+    color-scheme: dark;
+    --surface: #222222;
+    --on-surface: #ffffff;
+  }
+
+  .prose {
+    --tw-prose-body: var(--on-surface);
+    --tw-prose-headings: var(--on-surface);
+    --tw-prose-lead: var(--on-surface);
+    --tw-prose-links: var(--primary);
+    --tw-prose-bold: var(--on-surface);
+  }
+
+  body {
+    @apply text-on-surface;
+    @apply bg-surface;
+  }
+}
