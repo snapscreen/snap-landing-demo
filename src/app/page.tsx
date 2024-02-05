@@ -66,13 +66,13 @@ export default function Home() {
             <div className="relative z-10 w-full mt-auto">
               <div className='text-center mb-3 text-sm'>
                 <button 
-                  onClick={() => setOpen(true)}
+                  onClick={() => (setOpen(true), setIframeSrc(''))}
                   type="button"
                   className='font-bold text-primary underline underline-offset-4 decoration-1'>
                   Show more</button>
               </div>
               <button 
-                onClick={() => setOpen(true)}
+                onClick={() => (setOpen(true), setIframeSrc(''))}
                 type="button" 
                 className="flex items-center justify-center text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary text-on-primary duration-200 focus:ring-offset-2 focus:ring-inline-flex"
               >
@@ -102,7 +102,13 @@ export default function Home() {
             <h2 className='text-4xl font-bold leading-0 tracking-tighter mr-auto mb-4'>
               Looking for tickets?</h2>
             <p className='mb-4 w-full'>
-              Get your tickets for upcoming games at <a href="#" className='font-bold text-primary underline underline-offset-4 decoration-1'>www.hellotickets.com</a></p>
+              Get your tickets for upcoming games at 
+              <button 
+                onClick={() => handleButtonClick("https://www.hellotickets.com/us/miami/sports/miami-heat-tickets/2024-03-05,1930/1891286/2")}
+                type="button"  
+                className='font-bold text-primary underline underline-offset-4 decoration-1'>
+                www.hellotickets.com</button>
+            </p>
             <div className="relative z-10 w-full mt-auto">
               <button 
                 onClick={() => handleButtonClick("https://www.hellotickets.com/us/miami/sports/miami-heat-tickets/2024-03-05,1930/1891286/2")}
@@ -122,7 +128,7 @@ export default function Home() {
               Ask a question and get answers from our AI and the fan community.</p>
             <div className="relative z-10 w-full mt-auto">
               <button 
-                onClick={() => handleButtonClick("https://chat.vercel.ai/")}
+                onClick={() => (setOpen(true), setIframeSrc(''))}
                 type="button" 
                 className="flex items-center justify-center text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-on-surface text-surface duration-200 focus:ring-offset-2 focus:ring-inline-flex"
               >
@@ -143,7 +149,7 @@ export default function Home() {
           </div>
           <Card isVideo caption='Create and share your own 30-second replay!'>
             <button 
-              onClick={() => setOpen(true)}
+              onClick={() => (setOpen(true), setIframeSrc(''))}
               type="button" 
               className="relative z-10 flex items-center justify-center text-xl py-2 my-auto w-16 h-16 font-semibold shadow-lg rounded-full bg-black/80 text-white backdrop-blur duration-200 focus:ring-2 focus:ring-offset-2 focus:ring-inline-flex"
             >
@@ -177,7 +183,7 @@ export default function Home() {
       <Sheet 
         rootId="root" 
         isOpen={isOpen} 
-        onClose={() => setOpen(false)}
+        onClose={() => (setOpen(false), setIframeSrc(''))}
         snapPoints={[800, 600, 0]}
         initialSnap={1}
       >
@@ -187,13 +193,14 @@ export default function Home() {
             <Sheet.Scroller>
               <iframe 
                 src={iframeSrc}
-                className='w-full h-screen' 
-              />
+                className='w-full h-screen bg-surface'
+                allowTransparency
+              ><p>Your browser does not support iframes.</p></iframe>
             </Sheet.Scroller>
           </Sheet.Content>
         </Sheet.Container>
         <Sheet.Backdrop 
-          onTap={() => setOpen(false)}
+          onTap={() => (setOpen(false), setIframeSrc(''))}
         />
       </Sheet>
     </div>
