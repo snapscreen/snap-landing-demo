@@ -162,7 +162,7 @@ export default function Home() {
         <section className='w-full mt-8 pt-8 border-t-4 border-primary border-dotted'>
           <h2 className='font-bold text-xl mb-2 flex items-center gap-3'>
             <span className="material-symbols-rounded" aria-hidden="true">smart_display</span>
-            Clip it up
+            ClipShare
           </h2>
           <div className='mb-2 flex items-center gap-3'>
             <span className="relative flex h-3 w-3">
