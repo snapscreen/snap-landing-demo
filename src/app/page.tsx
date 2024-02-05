@@ -101,12 +101,12 @@ export default function Home() {
             </div>
           </Card>
 
-          <Card overline='Merchandise'>
+          <Card overline='Statistics'>
             <h2 className='text-4xl font-bold leading-0 tracking-tighter mr-auto mb-4'>
               Explore Team Insights!
             </h2>
             <p className='mb-4 w-full'>
-              Grab your team’s merch now</p>
+              View analytics and statistics about the teams.</p>
             <div className="relative z-10 w-full mt-auto">
               <button 
                 onClick={() => handleButtonClick("stats.png")}
@@ -124,7 +124,7 @@ export default function Home() {
               Gear Up for Glory!
             </h2>
             <p className='mb-4 w-full'>
-              Grab your team’s merch now</p>
+              Shop official merchandise. T-shirts, caps, jackets available for men and women. 100% authentic.</p>
             <div className="relative z-10 w-full mt-auto">
               <button 
                 onClick={() => handleButtonClick("fanatics.png")}
