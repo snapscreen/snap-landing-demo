@@ -173,9 +173,9 @@ export default function Home() {
           </div>
           <Card isVideo caption='Create and share your own 30-second replay!'>
             <button 
-              onClick={() => (setOpen(true), setIframeSrc(''))}
+              onClick={() => handleButtonClick("ai.png")}
               type="button" 
-              className="relative z-10 flex items-center justify-center text-xl py-2 my-auto w-16 h-16 font-semibold shadow-lg rounded-full bg-black/80 text-white backdrop-blur duration-200 focus:ring-2 focus:ring-offset-2 focus:ring-inline-flex"
+              className="relative z-10 flex items-center justify-center text-xl py-2 my-auto w-20 h-20 font-semibold shadow-lg rounded-full bg-black/80 text-white backdrop-blur duration-200 focus:ring-2 focus:ring-offset-2 focus:ring-inline-flex"
             >
               <span className='sr-only'>Edit and share clip</span>
               <span 
