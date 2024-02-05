@@ -6,7 +6,27 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
 import Card from '@/components/Common/Card'
+import SearchResults from '@/components/Common/SearchResults'
 import ThemeSwitch from '@/components/Common/ThemeSwitch'
+
+const resultsData = [
+  {
+    formattedUrl: "nba.com",
+    title: "Detroit Pistons vs Miami Heat Oct 25, 2023 Game Summary",
+  },
+  {
+    formattedUrl: "espn.com",
+    title: "Heat 112-100 Pistons (Mar 19, 2023) Final Score",
+  },
+  {
+    formattedUrl: "aiscore.com",
+    title: "Miami Heat vs Detroit Pistons Head to Head - Basketball",
+  },
+  {
+    formattedUrl: "cbssports.com",
+    title: "Detroit Pistons vs. Miami Heat Box Score, Summary, and ...",
+  }
+]
 
 export default function Home() {
   const [isOpen, setOpen] = React.useState(false)
@@ -203,7 +223,7 @@ export default function Home() {
             <span className="material-symbols-rounded" aria-hidden="true">search</span>
             Web Search Results
           </h2>
-          Loading...
+          <SearchResults results={resultsData} />
         </section>
       </main>
       
