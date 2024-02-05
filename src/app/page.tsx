@@ -9,7 +9,13 @@ import Card from '@/components/Common/Card'
 import ThemeSwitch from '@/components/Common/ThemeSwitch'
 
 export default function Home() {
-  const [isOpen, setOpen] = React.useState(false);
+  const [isOpen, setOpen] = React.useState(false)
+  const [iframeSrc, setIframeSrc] = React.useState("")
+
+  const handleButtonClick = (url: string) => {
+    setIframeSrc(url)
+    setOpen(true)
+  };
 
   return (
     <div className='max-w-screen-md mx-auto bg-surface' id="root">
@@ -22,7 +28,8 @@ export default function Home() {
         </h1>
         <p className='text-sm '>
           Live on{' '}
-          <a href="#" className='font-bold text-primary underline underline-offset-4 decoration-1'>FOX sports</a>
+          <a href="#" className='font-bold text-primary underline underline-offset-4 decoration-1'>
+            FOX sports</a>
         </p>
         <section className='grid grid-cols-2 gap-4 my-4 w-full'>
           <Card overline='Best Odds'>
@@ -35,7 +42,7 @@ export default function Home() {
                   width={60}
                   height={60}
                 />
-                <div className='text-sm font-medium'>@ Miami Heat</div>
+                <div className='text-sm font-medium'><span className='text-primary'>@</span> Miami Heat</div>
                 <div className='flex items-baseline gap-2 -mr-3'>
                   <span className='text-2xl font-bold'>1.90</span>
                   <span className='text-sm'>-1.5</span>
@@ -57,6 +64,13 @@ export default function Home() {
               </div>
             </div>
             <div className="relative z-10 w-full mt-auto">
+              <div className='text-center mb-3 text-sm'>
+                <button 
+                  onClick={() => setOpen(true)}
+                  type="button"
+                  className='font-bold text-primary underline underline-offset-4 decoration-1'>
+                  Show more</button>
+              </div>
               <button 
                 onClick={() => setOpen(true)}
                 type="button" 
@@ -66,19 +80,32 @@ export default function Home() {
               </button>
             </div>
           </Card>
+
           <Card overline='Merchandise'>
-            <p className="text-xl text-primary lg:text-2xl font-bold mt-6">
-              Merchandise
-            </p>
+            <h2 className='text-4xl font-bold leading-0 tracking-tighter mr-auto mb-4'>
+              Gear Up for Glory!
+            </h2>
+            <p className='mb-4 w-full'>
+              Grab your team's merch now</p>
+            <div className="relative z-10 w-full mt-auto">
+              <button 
+                onClick={() => handleButtonClick("https://www.fanatics.com/nba/")}
+                type="button" 
+                className="flex items-center justify-center text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary text-on-primary duration-200 focus:ring-offset-2 focus:ring-inline-flex"
+              >
+                Get merch
+              </button>
+            </div>
           </Card>
+
           <Card overline='Tickets'>
             <h2 className='text-4xl font-bold leading-0 tracking-tighter mr-auto mb-4'>
               Looking for tickets?</h2>
-            <p className='mb-4'>
+            <p className='mb-4 w-full'>
               Get your tickets for upcoming games at <a href="#" className='font-bold text-primary underline underline-offset-4 decoration-1'>www.hellotickets.com</a></p>
             <div className="relative z-10 w-full mt-auto">
               <button 
-                onClick={() => setOpen(true)}
+                onClick={() => handleButtonClick("https://www.hellotickets.com/us/miami/sports/miami-heat-tickets/2024-03-05,1930/1891286/2")}
                 type="button" 
                 className="flex items-center justify-center text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary text-on-primary duration-200 focus:ring-offset-2 focus:ring-inline-flex"
               >
@@ -86,15 +113,16 @@ export default function Home() {
               </button>
             </div>
           </Card>
+
           <Card overline='Missing information?'>
             <h2 className='text-2xl font-bold leading-0 tracking-tighter mr-auto mb-4'>
               Feeling curious or missing information?
             </h2>
-            <p className='mb-4'>
+            <p className='mb-4 w-full'>
               Ask a question and get answers from our AI and the fan community.</p>
             <div className="relative z-10 w-full mt-auto">
               <button 
-                onClick={() => setOpen(true)}
+                onClick={() => handleButtonClick("https://chat.vercel.ai/")}
                 type="button" 
                 className="flex items-center justify-center text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-on-surface text-surface duration-200 focus:ring-offset-2 focus:ring-inline-flex"
               >
@@ -156,7 +184,12 @@ export default function Home() {
         <Sheet.Container className='!bg-surface !text-on-surface'>
           <Sheet.Header />
           <Sheet.Content>
-            <Sheet.Scroller>{/*...*/}</Sheet.Scroller>
+            <Sheet.Scroller>
+              <iframe 
+                src={iframeSrc}
+                className='w-full h-screen' 
+              />
+            </Sheet.Scroller>
           </Sheet.Content>
         </Sheet.Container>
         <Sheet.Backdrop 
