@@ -27,6 +27,6 @@
 
   body {
     @apply text-on-surface;
-    @apply bg-surface;
+    @apply !bg-surface;
   }
 }

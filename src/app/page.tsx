@@ -1,6 +1,7 @@
 'use client'
 
 import * as React from 'react'
+import Sheet from 'react-modal-sheet';
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
@@ -8,47 +9,14 @@ import Card from '@/components/Common/Card'
 import ThemeSwitch from '@/components/Common/ThemeSwitch'
 
 export default function Home() {
-
-  const list = {
-    visible: {
-      opacity: 1,
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.2,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      transition: {
-        when: "afterChildren",
-      },
-    },
-  }
-
-  const animatedItem = {
-    visible: { 
-      opacity: 1, 
-      y: 0 
-    },
-    hidden: { 
-      opacity: 0, 
-      y: 100 
-    },
-  }
-
-  const ref = React.useRef(null)
-  const isInView = useInView(ref, { once: false });
-
-  const stickyElement = React.useRef(null);
+  const [isOpen, setOpen] = React.useState(false);
 
   return (
-    <div className='max-w-screen-md mx-auto'>
-      <header className="mx-auto text-lg font-semibold gap-6 flex justify-between items-center px-8 py-6">
-
-        
+    <div className='max-w-screen-md mx-auto bg-surface' id="root">
+      <header className="mx-auto gap-6 flex justify-center items-center px-8 py-6">
+        <p className='text-sm font-medium opacity-80'>Powered by SnapOdds</p>
       </header>
       <main className="flex flex-col items-center justify-between px-6 mx-auto">
-        <p className='mb-6 text-sm font-medium opacity-80'>Powered by SnapOdds</p>
         <h1 className='text-xl font-bold'>
           Miami Heat vs. Detroit Pistons
         </h1>
@@ -90,6 +58,7 @@ export default function Home() {
             </div>
             <div className="relative z-10 w-full mt-auto">
               <button 
+                onClick={() => setOpen(true)}
                 type="button" 
                 className="flex items-center justify-center text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary text-on-primary duration-200 focus:ring-offset-2 focus:ring-inline-flex"
               >
@@ -109,6 +78,7 @@ export default function Home() {
               Get your tickets for upcoming games at <a href="#" className='font-bold text-primary underline underline-offset-4 decoration-1'>www.hellotickets.com</a></p>
             <div className="relative z-10 w-full mt-auto">
               <button 
+                onClick={() => setOpen(true)}
                 type="button" 
                 className="flex items-center justify-center text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary text-on-primary duration-200 focus:ring-offset-2 focus:ring-inline-flex"
               >
@@ -128,6 +98,7 @@ export default function Home() {
           </div>
           <Card isVideo caption='Create and share your own 30-second replay!'>
             <button 
+              onClick={() => setOpen(true)}
               type="button" 
               className="relative z-10 flex items-center justify-center text-xl py-2 my-auto w-16 h-16 font-semibold shadow-lg rounded-full bg-black/80 text-white backdrop-blur duration-200 focus:ring-2 focus:ring-offset-2 focus:ring-inline-flex"
             >
@@ -158,6 +129,23 @@ export default function Home() {
           <ThemeSwitch />
         </div>
       </footer>
+      <Sheet 
+        rootId="root" 
+        isOpen={isOpen} 
+        onClose={() => setOpen(false)}
+        snapPoints={[800, 600, 0]}
+        initialSnap={1}
+      >
+        <Sheet.Container className='!bg-surface !text-on-surface'>
+          <Sheet.Header />
+          <Sheet.Content>
+            <Sheet.Scroller>{/*...*/}</Sheet.Scroller>
+          </Sheet.Content>
+        </Sheet.Container>
+        <Sheet.Backdrop 
+          onTap={() => setOpen(false)}
+        />
+      </Sheet>
     </div>
   )
 }
