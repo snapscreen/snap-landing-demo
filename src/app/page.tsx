@@ -13,18 +13,27 @@ const resultsData = [
   {
     formattedUrl: "nba.com",
     title: "Detroit Pistons vs Miami Heat Oct 25, 2023 Game Summary",
+    time: "01/20/2024"
   },
   {
     formattedUrl: "espn.com",
     title: "Heat 112-100 Pistons (Mar 19, 2023) Final Score",
+    time: "01/07/2024"
   },
   {
     formattedUrl: "aiscore.com",
     title: "Miami Heat vs Detroit Pistons Head to Head - Basketball",
+    time: "12/30/2023"
   },
   {
     formattedUrl: "si.com",
     title: "Miami Heat vs. Detroit Pistons: Five Major Takeaways",
+    time: "11/19/2023"
+  },
+  {
+    formattedUrl: "foxsports.com",
+    title: "Detroit Pistons vs Miami Heat - October 25, 2023",
+    time: "10/10/2023"
   }
 ]
 
