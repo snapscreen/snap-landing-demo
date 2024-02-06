@@ -14,13 +14,13 @@ export default function Card({
   return (
     <div className="flex flex-col col-span-2 sm:col-span-1">
       {overline && 
-        <p className="text-sm text-center opacity-80 mt-2 mb-2">
+        <p className="text-sm text-center opacity-80 mt-2 mb-2 bg-surface w-full">
           {overline}
         </p>
       }
       <div
         className={
-          `flex flex-col justify-center items-center h-full w-full p-8 relative border border-slate-300 dark:border-slate-600 rounded-xl overflow-hidden bg-surface shadow-xl dark:shadow-thick 
+          `relative flex flex-col justify-center items-center h-full w-full p-8 border border-slate-300 dark:border-slate-600 rounded-xl overflow-hidden bg-surface shadow-xl dark:shadow-thick 
           ${isVideo ? 'aspect-video' : ''}
           ${classNames && classNames}
           `}

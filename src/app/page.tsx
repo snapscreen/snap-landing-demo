@@ -61,7 +61,7 @@ export default function Home() {
             FOX sports</a>
         </p>
         <section className='grid grid-cols-2 gap-4 my-4 w-full'>
-          <Card overline='Best Odds'>
+          <Card overline='Best Odds' classNames='top-0'>
             <div className='grid grid-cols-2 divide-x mb-4'>
               <div className='flex flex-col items-center gap-2 px-3'>
                 <Image 
