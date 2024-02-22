@@ -237,7 +237,7 @@ export default function Home() {
               </span>
             </button>
             <Image 
-              src="/video-still.webp"
+              src="/video-still.png"
               className='absolute inset-0 z-0 object-cover w-full h-full'
               alt="clip"
               width={500}
